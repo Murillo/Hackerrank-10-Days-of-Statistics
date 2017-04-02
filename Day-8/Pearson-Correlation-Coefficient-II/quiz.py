@@ -1,3 +1,4 @@
+"""
 Pearson Correlation Coefficient II
 Quiz: https://www.hackerrank.com/challenges/s10-mcq-7
 
@@ -23,3 +24,6 @@ r +/- 3/4
 
 if bx = by then
   r = -3/4
+"""
+
+print ("Result is: {}".format("-3/4"))
