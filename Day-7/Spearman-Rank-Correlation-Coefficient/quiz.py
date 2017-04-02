@@ -1,4 +1,5 @@
 # Spearman's Rank Correlation Coefficient
+# Reference: https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient
 # Quiz: Given two n-element data sets, X and Y, calculate the value of
 # Spearman's rank correlation coefficient.
 
@@ -13,7 +14,11 @@ def rank(dt):
     return rank
 
 def spearman(x, y, rx, ry, n):
-    pass
+    diff_rank = 0
+    for i in range(n):
+        if rx[x[i]] != ry[y[i]]:
+            diff_rank = diff_rank + ((rx[x[i]] - ry[y[i]]) ** 2)
+    return (6 * diff_rank) / (n ** 3 - n)
 
 # Set data
 n = int(float(input()))
@@ -25,4 +30,5 @@ rank_x = rank(data_set_x)
 rank_y = rank(data_set_y)
 
 # Gets the result and show on the screen
-print(round(spearman(data_set_x, data_set_y, rank_x, rank_y, n), 3))
+s = spearman(data_set_x, data_set_y, rank_x, rank_y, n)
+print(round(1 - s, 3))
