@@ -8,8 +8,8 @@ def median(size, values):
 
 # Set the data
 size = int(input())
-elements = list(map(int, input().split()))
-frequencies = list(map(int, input().split()))
+elements = list(map(int, input().split(' ')))
+frequencies = list(map(int, input().split(' ')))
 
 new_data = []
 for i in range(len(elements)):
@@ -29,4 +29,4 @@ else:
 # Get the final result and print on the screen
 low = median(len(data_low), data_low)
 high = median(len(data_high), data_high)
-print(high - low)
+print(round(abs(high - low),1))
