@@ -1,6 +1,6 @@
 size = int(input())
-numbers = list(map(int, input().split()))
-weighted = list(map(int, input().split()))
+numbers = list(map(float, input().strip().split(' ')))
+weighted = list(map(float, input().strip().split(' ')))
 
 sum_items = 0
 for i in range(size):
