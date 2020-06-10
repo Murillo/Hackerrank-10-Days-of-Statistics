@@ -7,13 +7,13 @@
 from sklearn import linear_model
 
 # Set data
-m, n = map(int, input().split())
+m, n = map(int, raw_input().split(' '))
 X, Y = [], []
 
 # Get the parameters X and Y for discovery the variables a and b
 for i in range(n):
     x = [0]
-    elements = list(map(float, input().split()))
+    elements = list(map(float, raw_input().split(' ')))
     for j in range(len(elements)):
         if j < m:
             x.append(elements[j])
@@ -32,7 +32,7 @@ q = int(input())
 new_X = []
 for i in range(q):
     x = [0]
-    elements = list(map(float, input().split()))
+    elements = list(map(float, raw_input().split(' ')))
     for j in range(len(elements)):
         x.append(elements[j])
     new_X.append(x)
